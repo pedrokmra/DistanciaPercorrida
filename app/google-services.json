@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "65196177042",
+    "project_id": "distancia-percorrida",
+    "storage_bucket": "distancia-percorrida.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65196177042:android:b6f3e5b6016df2bc91d84b",
+        "android_client_info": {
+          "package_name": "com.example.distanciapercorrida"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65196177042-226mea4j5f9dma4m881k1ejfgjnumlhe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY7YyTdxsoSJtuMWS7rWDcwJtyglcJ5cc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65196177042-226mea4j5f9dma4m881k1ejfgjnumlhe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
