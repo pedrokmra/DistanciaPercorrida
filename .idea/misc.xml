@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/pedro_henrique_de_ca/AndroidStudioProjects/DistanciaPercorrida/app/src/main/res/layout/activity_admin.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/pedro_henrique_de_ca/AndroidStudioProjects/DistanciaPercorrida/app/src/main/res/layout/activity_login.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/pedro_henrique_de_ca/AndroidStudioProjects/DistanciaPercorrida/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/pedro_henrique_de_ca/AndroidStudioProjects/DistanciaPercorrida/app/src/main/res/layout/activity_operator.xml" value="0.14130434782608695" />
       </map>
     </option>
   </component>

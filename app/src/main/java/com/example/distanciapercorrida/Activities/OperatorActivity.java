@@ -1,4 +1,4 @@
-package com.example.distanciapercorrida;
+package com.example.distanciapercorrida.Activities;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -10,14 +10,22 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.distanciapercorrida.FirebaseLoginHelper;
+import com.example.distanciapercorrida.LocationService;
+import com.example.distanciapercorrida.R;
+
+public class OperatorActivity extends FirebaseLoginHelper {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_operator);
 
         checkPermissions();
+
+        findViewById(R.id.button_logout).setOnClickListener(v -> {
+            logout();
+        });
     }
 
     public void catchLocation(View view) {

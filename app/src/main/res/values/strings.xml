@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Distancia Percorrida</string>
     <string name="pegar_localizao">Pegar Localização</string>
+    <string name="login">Login</string>
+    <string name="email">email</string>
+    <string name="senha">senha</string>
+    <string name="logar">Logar</string>
+    <string name="deslogar">Deslogar</string>
 </resources>
