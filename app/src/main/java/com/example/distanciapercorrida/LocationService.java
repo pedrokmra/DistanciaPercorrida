@@ -3,6 +3,7 @@ package com.example.distanciapercorrida;
 import android.annotation.SuppressLint;
 import android.app.Service;
 import android.content.Intent;
+import android.location.Location;
 import android.os.IBinder;
 import android.os.Looper;
 import android.util.Log;
@@ -18,6 +19,7 @@ import com.google.android.gms.location.Priority;
 
 public class LocationService extends Service {
     String TAG = "LocationService";
+    private Location lastLocation = null;
 
     @Nullable
     @Override
@@ -62,17 +64,26 @@ public class LocationService extends Service {
         return locationRequest;
     }
 
-    private void sendLocation(LocationResult location) {
-        double latitude = location.getLastLocation().getLatitude();
-        double longitude = location.getLastLocation().getLongitude();
-        Log.i(TAG, "onLocationResult: " + latitude + " - " + longitude);
+    private void calculateDistance(LocationResult locationResult) {
+        double latitude = locationResult.getLastLocation().getLatitude();
+        double longitude = locationResult.getLastLocation().getLongitude();
+        float distance = 0;
+        Location loc = locationResult.getLastLocation();
+
+        if (lastLocation != null) {
+            distance = loc.distanceTo(lastLocation);
+        } else {
+            lastLocation = loc;
+        }
+
+        Log.i(TAG, "onLocationResult: " + latitude + " - " + longitude + " - " + distance + "M");
     }
 
     private LocationCallback locationCallback = new LocationCallback() {
         @Override
         public void onLocationResult(@NonNull LocationResult locationResult) {
             super.onLocationResult(locationResult);
-            sendLocation(locationResult);
+            calculateDistance(locationResult);
         }
     };
 }
