@@ -20,6 +20,7 @@ import com.google.android.gms.location.Priority;
 public class LocationService extends Service {
     String TAG = "LocationService";
     private Location lastLocation = null;
+    FirebaseDatabaseHelper db = new FirebaseDatabaseHelper();
 
     @Nullable
     @Override
@@ -67,7 +68,7 @@ public class LocationService extends Service {
     private void calculateDistance(LocationResult locationResult) {
         double latitude = locationResult.getLastLocation().getLatitude();
         double longitude = locationResult.getLastLocation().getLongitude();
-        float distance = 0;
+        double distance = 0;
         Location loc = locationResult.getLastLocation();
 
         if (lastLocation != null) {
@@ -77,6 +78,7 @@ public class LocationService extends Service {
         }
 
         Log.i(TAG, "onLocationResult: " + latitude + " - " + longitude + " - " + distance + "M");
+        db.save(latitude, longitude, distance);
     }
 
     private LocationCallback locationCallback = new LocationCallback() {
