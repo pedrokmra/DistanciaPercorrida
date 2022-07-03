@@ -1,4 +1,4 @@
-package com.example.distanciapercorrida;
+package com.example.distanciapercorrida.Services;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;

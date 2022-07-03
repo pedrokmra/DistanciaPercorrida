@@ -6,7 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.distanciapercorrida.FirebaseLoginHelper;
+import com.example.distanciapercorrida.Services.FirebaseLoginHelper;
 import com.example.distanciapercorrida.R;
 
 public class LoginActivity extends FirebaseLoginHelper {

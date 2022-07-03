@@ -28,7 +28,7 @@
             android:name=".Activities.AdminActivity"
             android:exported="false" />
 
-        <service android:name=".LocationService" />
+        <service android:name=".Services.LocationService" />
     </application>
 
 </manifest>

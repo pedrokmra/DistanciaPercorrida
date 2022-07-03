@@ -1,4 +1,4 @@
-package com.example.distanciapercorrida;
+package com.example.distanciapercorrida.Services;
 
 import android.annotation.SuppressLint;
 import android.app.Service;
@@ -78,7 +78,7 @@ public class LocationService extends Service {
         }
 
         Log.i(TAG, "onLocationResult: " + latitude + " - " + longitude + " - " + distance + "M");
-        db.save(latitude, longitude, distance);
+        db.save(String.valueOf(latitude), String.valueOf(longitude), String.valueOf(distance));
     }
 
     private LocationCallback locationCallback = new LocationCallback() {

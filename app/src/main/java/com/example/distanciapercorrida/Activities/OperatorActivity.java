@@ -2,7 +2,6 @@ package com.example.distanciapercorrida.Activities;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.content.Intent;
@@ -10,8 +9,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.example.distanciapercorrida.FirebaseLoginHelper;
-import com.example.distanciapercorrida.LocationService;
+import com.example.distanciapercorrida.Services.FirebaseLoginHelper;
+import com.example.distanciapercorrida.Services.LocationService;
 import com.example.distanciapercorrida.R;
 
 public class OperatorActivity extends FirebaseLoginHelper {
